@@ -257,7 +257,7 @@ function updateTitle() {
 // Weather - found a cool API; basically how it works, there's my key and in the search query I introduced
 // the wanted city i found in one of their json files
 
-let weatherLink = 'http://api.openweathermap.org/data/2.5/weather?q=Copenhagen&APPID=3c43fac79a2cc3e14edecaf8911f8e2c';
+let weatherLink = 'https://api.openweathermap.org/data/2.5/weather?q=Copenhagen&APPID=3c43fac79a2cc3e14edecaf8911f8e2c';
 
 function fetchWeatherData() {
 	fetch(weatherLink).then((e) => e.json()).then((weather) => showWeather(weather));
