@@ -268,6 +268,7 @@ function fetchWeatherData() {
 function showWeather(weather) {
 	let degKelvin = weather.main.temp_max;
 	let degCelsius = degKelvin - 273.15;
+	degCelsius = Math.round(degCelsius);
 	document.querySelector('.set-degrees').innerHTML = degCelsius + ' &#8451;';
 }
 
