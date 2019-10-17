@@ -1,0 +1,390 @@
+/* GENERAL STYLING */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+/* COLOR THEME STYLING */
+
+html[data-theme=mountain] {
+	--todo-bg-col1: rgba(97, 49, 71, 1);
+	--todo-bg-col2: rgba(34, 36, 61, 1);
+	--date-bg-img: url(images/mountain.jpeg);
+	--apps-bg-col1: white;
+	--todo-txt-col: white;
+	--app-bg-col: white;
+	--scroll-thumb-col: rgba(0, 0, 0, 0.4);
+	--scroll-track-col: rgba(0, 0, 0, 0.9);
+	--modal-border-top: rgb(189, 23, 98);
+}
+
+html[data-theme=wiredelta] {
+	--todo-bg-col1: #69c7b8;
+	--todo-bg-col2: #4d76b1;
+	--date-bg-img: url(images/mountain-forest.jpeg);
+	--apps-bg-col1: white;
+	--todo-txt-col: white;
+	--app-bg-col: white;
+	--scroll-thumb-col: rgba(255, 255, 255, 0.4);
+	--scroll-track-col: rgba(255, 255, 255, 0.9);
+	--modal-border-top: rgb(21, 247, 209);
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+	font-size: 2.8rem;
+	font-family: 'Esteban';
+}
+
+h2 {
+	font-size: 2rem;
+	font-family: 'Montserrat';
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-family: 'Montserrat';
+}
+
+.set-inspirational-message,
+.set-degrees {
+	font-size: 2rem;
+	font-family: 'Esteban';
+}
+
+.section-date {
+	text-align: center;
+}
+
+h2 {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+thead {
+	font-family: 'Esteban';
+}
+
+tbody {
+	font-family: 'Montserrat';
+}
+
+.modal-article p {
+	font-family: 'Montserrat';
+	font-size: 1.5rem;
+}
+
+.modal-article p:first-of-type {
+	font-size: 2rem;
+	font-weight: 900;
+	color: var(--modal-border-top);
+}
+
+/* TABLE CSS */
+
+thead,
+tbody {
+	font-size: 1.5rem;
+}
+
+table {
+	width: 100%;
+}
+
+tr td,
+tr th {
+	border: 1px solid rgba(255, 255, 255, 0);
+	padding: 10px;
+	width: 33.3%;
+	text-align: center;
+}
+
+table thead,
+table tbody {
+	color: var(--todo-txt-col);
+}
+
+.table-body {
+	max-height: 160px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.table-body::-webkit-scrollbar {
+	width: 5px;
+}
+
+.table-body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 5px var(--scroll-track-col);
+}
+
+.table-body::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 0 0 5px var(--scroll-thumb-col);
+}
+
+.move-previous:hover {
+	transition: all 0.5s ease;
+	transform: translateX(-15px);
+	cursor: pointer;
+}
+
+.move-next:hover {
+	transition: all 0.5s ease;
+	transform: translateX(15px);
+	cursor: pointer;
+}
+
+.table-head table tr {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.table-body table tr {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-body table tr:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	cursor: pointer;
+}
+
+/* SECTION STYLING */
+
+section.section-apps {
+	background-color: var(--apps-bg-col1);
+	padding: 5px;
+	position: relative;
+}
+
+section.section-date {
+	background-color: var(--date-bg-col1);
+	padding: 5px 10px;
+	background-image: var(--date-bg-img);
+	background-position: center;
+	background-size: cover;
+	color: var(--todo-txt-col);
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+section.section-todo {
+	background: linear-gradient(240deg, var(--todo-bg-col1) 0%, var(--todo-bg-col2) 60%);
+	color: var(--todo-txt-col);
+	padding: 5px 10px;
+}
+
+/* APP SECTION STYLING */
+
+.container-app {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.section-apps header {
+	margin: -5px;
+	padding: 5px;
+	margin-bottom: 20px;
+	box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.6);
+	background: linear-gradient(240deg, var(--todo-bg-col1) 0%, var(--todo-bg-col2) 60%);
+	color: var(--todo-txt-col);
+}
+
+section article {
+	background-color: var(--app-bg-col);
+	border-radius: 5px;
+	margin: 8px;
+	padding: 5px 10px;
+	box-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#add-new {
+	font-size: 4.5rem;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: var(--todo-bg-col1);
+}
+
+form input:focus {
+	outline: none;
+}
+
+form textarea:focus {
+	outline: none;
+}
+
+/* DATE SECTION STYLING */
+
+.container-date {
+	margin: 10vh 0;
+}
+
+.container-controls {
+	text-align: center;
+}
+
+.container-controls * {
+	display: inline-block;
+}
+
+.container-controls p {
+	font-size: 3rem;
+	padding: 0px 25px;
+}
+
+.set-weekday-hidden {
+	display: none;
+}
+
+/* MODAL */
+
+.modal {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+}
+
+.modal-content {
+	background-color: white;
+	margin: 15% auto;
+	padding: 2rem;
+	width: 85%;
+	max-width: 400px;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+	border-top: 5px solid var(--modal-border-top);
+}
+
+.modal-article {
+	position: relative;
+	opacity: 0;
+}
+
+.modal-article .button-insert {
+	font-family: 'Esteban';
+	font-size: 1.5rem;
+	color: white;
+	border-radius: 15px;
+	padding: 5px 20px;
+	border: 0;
+	background: linear-gradient(240deg, var(--todo-bg-col1) 0%, var(--modal-border-top) 60%);
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	transition: all 0.4s ease 0s;
+}
+
+.modal-article .button-cancel {
+	font-family: 'Esteban';
+	font-size: 1.5rem;
+	color: white;
+	border-radius: 15px;
+	padding: 5px 20px;
+	border: 0;
+	position: absolute;
+	right: 100px;
+	bottom: 0;
+	background-color: #ccc2ae;
+}
+
+.modal-article .button-insert:hover {
+	cursor: pointer;
+	background: linear-gradient(240deg, var(--todo-bg-col1) 0%, var(--todo-bg-col2) 60%);
+}
+
+.modal-article .button-cancel:hover {
+	cursor: pointer;
+	background-color: #a28660;
+}
+
+.close {
+	color: #0c0301;
+	float: right;
+	margin-right: 0px;
+	margin-top: -20px;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: var(--todo-bg-col1);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+@keyframes text-anim {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	animation: fade-in 1.1s ease-out forwards;
+}
+
+.text-animation-modal {
+	animation: text-anim 1s 1 1.1s forwards;
+}
+
+/* tablet */
+
+@media screen and (min-width: 750px) {
+	html {
+		font-size: 70%;
+	}
+
+	main {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 280px 3fr;
+		height: 100vh;
+	}
+
+	section.section-apps {
+		grid-column: 1/span 1;
+		grid-row: 1/span 2;
+	}
+}
+
+/* desktop */
+
+@media screen and (min-width: 1200px) {
+	html {
+		font-size: 75%;
+	}
+
+	main {
+		grid-template-columns: 3.5fr 5fr;
+		grid-template-rows: 280px 3fr;
+	}
+}

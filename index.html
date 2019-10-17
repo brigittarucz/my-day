@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> My Day </title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Esteban|Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+
+    <section class="section-apps">
+      <header>
+        <h2 class="section-apps-header"> Utilities </h2>
+      </header>
+      <div class="container-app">
+        <article class="inspiration-app">
+          <h3> Daily inspiration dose </h3>
+          <p class="set-inspirational-message"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+            accusantium
+            molestiae natus quaerat incidunt quod.
+          </p>
+        </article>
+        <article class="theme-app">
+          <div class="theme-changer">
+            <h3> Choose theme </h3>
+            <select name="theme" id="theme">
+              <option value="mountain"> Mountain </option>
+              <option value="wiredelta"> Wiredelta </option>
+            </select>
+          </div>
+        </article>
+        <article class="title-app">
+          <h3> Personalize title </h3>
+          <input type="text" class="set-title-input">
+        </article>
+        <article class="weather-app">
+          <h3> Weather Forecast</h3>
+          <p class="set-degrees"> 12 deg </p>
+        </article>
+      </div>
+      <i class="fa fa-plus-circle" id="add-new"></i>
+    </section>
+
+
+    <section class="section-date">
+      <div class="container-date">
+        <h1 class="set-today-date"> <span class="set-weekday"> Friday </span> <span class="set-weekday-hidden"> Friday
+          </span>
+          <span class="set-long-day"> 12th </span> <span class="set-long-month"> July </span> <span
+            class="set-long-year"> 2018 </span> </h1>
+        <h2 class="set-current-time"> 10.30 AM </h2>
+      </div>
+    </section>
+
+    <section class="section-todo">
+      <div class="container-controls">
+        <p class="move-previous"> &#10094; </p>
+        <h2> Today </h2>
+        <p class="move-next"> &#10095; </p>
+      </div>
+      <div class="table-head">
+        <table>
+          <thead>
+            <tr>
+              <th> Time </th>
+              <th> Description </th>
+              <th> Throw Away </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="table-body">
+        <table>
+          <tbody class="tbody-parent-container">
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal-element" class="modal">
+    <div class="modal-content fade-in">
+      <article class="modal-article text-animation-modal">
+        <form>
+          <p> Add New Activity </p>
+          <p> Time </p>
+          <input type="text" name="formtime" required>
+          <p> Description </p>
+          <textarea name="formdescrip" required>
+        </textarea>
+          <button type="submit" class="button-insert"> Insert </button>
+          <button class="button-cancel"> Cancel</button>
+        </form>
+      </article>
+    </div>
+  </div>
+
+  <template class="tr-child">
+    <tr>
+      <td class="set-tr-time"> 08:00 </td>
+      <td class="set-tr-descrip"> Laugh to Your Heart's Content </td>
+      <td class="set-tr-delete"> <i class="fa fa-trash"></i> </td>
+    </tr>
+  </template>
+  <script src="javascript.js"> </script>
+  <script src="https://use.fontawesome.com/840ad6c5f8.js"></script>
+</body>
+
+</html>
