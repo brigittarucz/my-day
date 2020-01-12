@@ -28,7 +28,7 @@ html[data-theme=mountain] {
 	--modal-border-top: rgb(189, 23, 98);
 }
 
-html[data-theme=wiredelta] {
+html[data-theme=aqua] {
 	--todo-bg-col1: #69c7b8;
 	--todo-bg-col2: #4d76b1;
 	--date-bg-img: url(images/mountain-forest.jpeg);
